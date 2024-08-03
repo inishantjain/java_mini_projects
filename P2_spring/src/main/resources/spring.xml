@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="alien" class="org.example.Alien"> <!--by default the scope is singleton-->
+        <property name="age" value="21"/>  <!--set the property using setter injection-->
+        <property name="laptop" ref="laptop"/>
+    </bean>
+
+    <bean id="laptop" class="org.example.Laptop"/>
+
+    <bean id="alienWithParametrizedConstructor" class="org.example.Alien">
+        <constructor-arg value="17"/>
+        <constructor-arg ref="laptop"/>
+    </bean>
+
+    <bean id="alienProtoType" class="org.example.Alien" scope="prototype"/> <!--by default the scope is singleton-->
+    <bean id="alienAutoWire" class="org.example.Alien" autowire="byName"/> <!--autowire automatically connect the object to the properties (this xml has laptop object now it will automatically be assigned to property laptop in our bean-->
+    <bean id="alienLazyInit" class="org.example.Alien" lazy-init="true"/> <!--autowire automatically connect the object to the properties (this xml has laptop object now it will automatically be assigned to property laptop in our bean-->
+</beans>
+
+<!--we can also create an inner bean by nesting a bean to limit the access of bean to outer bean only-->
