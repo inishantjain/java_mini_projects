@@ -1,64 +1,56 @@
-/* /WEB-INF/views/style.css */
+/* style.css */
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 18px;
 }
 
 .card {
-    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 500;
+    border-radius: 10px;
 }
 
 .card-body {
-    padding: 2rem;
+    padding: 30px;
 }
 
-.card-footer {
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
 }
 
 .btn-primary {
     background-color: #007bff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
+    border-color: #004085;
 }
 
-.nav-link {
-    font-size: 1rem;
-    font-weight: 500;
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.bg-light {
-    background-color: #ffffff !important;
+.bg-clr {
+    background-color: #f1faee;
 }
 
-.bg-dark {
-    background-color: #343a40 !important;
-}
-
-.text-white {
-    color: #ffffff !important;
-}
-
-.border-light {
-    border-color: #f8f9fa !important;
+.container {
+    margin-top: 50px;
 }
